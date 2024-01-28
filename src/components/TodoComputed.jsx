@@ -1,8 +1,10 @@
-const TodoComputed = () => {
+const TodoComputed = ({ computedItemsLeft, clearCompleted }) => {
   return (
-    <section className="rounded-md-b flex justify-between rounded-b-md bg-white px-4 py-4">
-      <span className=" text-gray-400">5 Items left</span>
-      <button className=" text-gray-400">Clear Completed</button>
+    <section className="rounded-md-b flex justify-between rounded-b-md bg-white px-4 py-4 transition-all duration-1000 dark:bg-gray-800">
+      <span className=" text-gray-400">{computedItemsLeft} Todos left</span>
+      <button className=" text-gray-400" onClick={clearCompleted}>
+        Clear Completed
+      </button>
     </section>
   );
 };
